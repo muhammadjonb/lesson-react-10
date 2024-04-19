@@ -1,0 +1,28 @@
+{
+    "students":[
+        {
+            "id": 1,
+            "name": "Emily",
+            "lastname": "Jones",
+            "group": "n41"
+        },
+        {
+            "id": 2,
+            "name": "David",
+            "lastname": "Johnson",
+            "group": "n42"
+        },
+        {
+            "id": 3,
+            "name": "Laura",
+            "lastname": "Davis",
+            "group": "n43"
+        },
+        {
+            "id": 4,
+            "name": "James",
+            "lastname": "Garcia",
+            "group": "n44"
+        }
+    ]
+}

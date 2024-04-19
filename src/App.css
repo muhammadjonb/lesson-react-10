@@ -1,0 +1,136 @@
+header{
+  display: flex;
+  align-items: flex-start;
+}
+
+
+.menu{
+  width: 260px;
+  height: 100vh;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #767676;
+  gap: 16px;
+}
+.menu h4{
+  position: relative;
+  font-weight: 400;
+  transition: 0.2s;
+  padding: 10px 0;
+  border-bottom: 2px solid #767676;
+  cursor: pointer;
+  font-size: 24px;
+  color: #333;
+}
+.menu h4:hover{
+  opacity: 60%;
+}
+.menu h4 a{
+  font-size: 24px;
+  color: #333;
+}
+.menu h4 a.active{
+  color: #f38154;
+}
+.menu h4::before{
+  content: '';
+  transition: 0.2s;
+  position: absolute;
+  width: 0%;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  background-color: #f38154;
+}
+
+.menu h4:hover::before{
+  width: 100%;
+}
+
+.rigth{
+  width: 100%;
+}
+
+.navbar_2{
+  widows: 100%;
+  height: 72px;
+  display: flex;
+  padding: 0 40px;
+  align-items: center;
+  justify-content: flex-end;
+  border-bottom: 1px solid #767676;
+  gap: 20px;
+}
+.navbar_2 h4{
+  font-size: 20px;
+  color: #333;
+  font-weight: 400;
+}
+.navbar_2 h4 a{
+  color: #333;
+}
+.navbar_2 h4 a.active{
+  color: #767676;
+}
+
+
+form{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 40px;
+  border-bottom: 1px solid #767676;
+  gap: 16px;
+}
+.form_input{
+  width: 27%;
+  display: flex;
+  align-items: center;
+}
+.form_input input{
+  width: 100%;
+  outline: none;
+  border-radius: 12px;
+  border: 1px solid #767676;
+  padding: 10px;
+}
+form button{
+  padding: 10px 20px;
+  border-radius: 12px;
+  background-color: #2db42d;
+  color: #fff;
+  font-size: 16px;
+  border: 1px solid #2db42d;
+}
+form button:hover{
+  background-color: #0e850e;
+}
+
+.table{
+  padding: 40px 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+.line{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #767676;
+  padding: 10px;
+  border-radius: 12px;  
+}
+
+.btn_delete{
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 12px;
+  border: 1px solid red;
+  background-color: red;
+}
+.btn_delete:hover{
+  background-color: rgba(255, 0, 0, 0.625);
+}
