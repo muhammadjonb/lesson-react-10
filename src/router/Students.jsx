@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchStudents } from "../app/students/studentSlice";
+import {  fetchStudents } from "../app/students/studentSlice";
 import Loader from "./Loading";
 
 const Students = () => {
@@ -11,11 +11,13 @@ const Students = () => {
     dispatch(fetchStudents());
   }, [dispatch]);
 
-  console.log(students)
+  const addStudent = (e) => {
+    e.preventDefault();
+  }
 
   return (
     <div>
-      <form>
+      <form onClick={addStudent}>
         <div className="form_input">
           <label htmlFor="name">Firstname:</label>
           <input type="text" id="name" placeholder="firstname" />
@@ -26,9 +28,9 @@ const Students = () => {
         </div>
         <div className="form_input">
           <label htmlFor="group">Group:</label>
-          <input type="text" id="group" placeholder="group" />
+          <input type="text" id="group" placeholder="group"  />
         </div>
-        <button type="button" className="btn">
+        <button type="submit" className="btn">
           Add Students
         </button>{" "}
       </form>

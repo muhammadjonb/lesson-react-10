@@ -21,7 +21,7 @@ export const fetchStudents = createAsyncThunk(
 
 export const addStudents = createAsyncThunk(
   "students/addStudents",
-  async (student, thunkAPI) => {
+  async (student) => {
     try {
       const response = await axios.post("http://localhost:3000/students", student);
       return response.data;
