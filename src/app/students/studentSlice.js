@@ -23,10 +23,10 @@ export const fetchStudents = createAsyncThunk(
 );
 
 export const addStudents = createAsyncThunk(
-  "studebts/addStudents",
+  "students/addStudents",
   async (student) => {
     try {
-      const res = await axios.post("http://losalhost:3000/students", student);
+      const res = await axios.post("http://localhost:3000/students", student);
       const data = await res.data;
       return data;
     } catch (error) {
@@ -41,7 +41,7 @@ const studentSlice = createSlice({
   reducers: {},
   extraReducers: (builder) => {
     // FETCH STUDENTS
-    builder.addCase(filteredStudents.panding, (state) => {
+    builder.addCase(fetchStudents.pending, (state) => {
       state.loading = true;
     });
     builder.addCase(fetchStudents.fulfilled, (state, action) => {
@@ -55,7 +55,7 @@ const studentSlice = createSlice({
       state.error = action.payload;
     });
     // ADD STUDEBTS
-    builder.addCase(addStudents.panding, (state) => {
+    builder.addCase(addStudents.pending, (state) => {
       state.loading = true;
     });
     builder.addCase(addStudents.fulfilled, (state, action) => {
