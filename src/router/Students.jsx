@@ -11,6 +11,8 @@ const Students = () => {
     dispatch(fetchStudents());
   }, [dispatch]);
 
+  console.log(students)
+
   return (
     <div>
       <form>
