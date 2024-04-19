@@ -43,6 +43,8 @@ const studentSlice = createSlice({
     // FETCH STUDENTS
     builder.addCase(fetchStudents.pending, (state) => {
       state.loading = true;
+      state.students = [];
+      state.error = "";
     });
     builder.addCase(fetchStudents.fulfilled, (state, action) => {
       state.loading = false;

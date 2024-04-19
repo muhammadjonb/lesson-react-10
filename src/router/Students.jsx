@@ -17,7 +17,6 @@ const Students = () => {
         <div className="form_input">
           <label htmlFor="name">Firstname:</label>
           <input type="text" id="name" placeholder="firstname" />
-          placeholder
         </div>
         <div className="form_input">
           <label htmlFor="lastname">Lastname:</label>
